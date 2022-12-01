@@ -11,6 +11,13 @@
   </head>
 
   <body>
+     <header>
+      <h1>Ruby on Rails スケジュール管理</h1>
+    </header>
     <%= yield %>
+    <footer>
+      <h2>Today:<%= Date.current.strftime('%Y/%m/%d') %></h2>
+      <h2>現在のスケジュールの数は<%= Post.count %>個です</h2>
+    </footer>
   </body>
 </html>
